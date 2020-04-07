@@ -3,6 +3,9 @@ let opacity = 0;
 const container = document.querySelector(".container");
 const resetButton = document.querySelector("#reset");
 
+const getRandomInt = max => {
+    return Math.floor(Math.random() * Math.floor(max));
+}
 
 const generateGrid = () => {
     size = parseInt(prompt("How many squares per side?"));
@@ -21,9 +24,13 @@ const addListeners = () => {
     
     squares.forEach(square => {
         square.addEventListener("mouseover", e => {
+            let red = getRandomInt(255);
+            let green = getRandomInt(255);
+            let blue = getRandomInt(255);
+            e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue})`;
             // opacity = (opacity + 10) % 255;
             // e.target.style.backgroundColor = `rgba(${opacity},${opacity},${opacity},${opacity})`;
-            e.target.classList.toggle("shaded");
+            // e.target.classList.toggle("shaded");
         });
     });
 }
