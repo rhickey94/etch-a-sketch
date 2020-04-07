@@ -24,11 +24,22 @@ h1 {
 
 .square {
     border: 1px dotted black;
-    background-color: skyblue;
+    background-color: rgba(255,255,255,1.0);
 }
 
 .square::before {
     content: "";
     padding-bottom: 100%;
     display: block;
+}
+
+.shaded {
+    background-color: black;
+}
+
+#reset {
+    margin: 0 auto 30px;
+    display: block;
+    height: 3rem;
+    font-size: 2rem;
 }
