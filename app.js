@@ -23,14 +23,16 @@ const addListeners = () => {
     const squares = document.querySelectorAll(".square");
     
     squares.forEach(square => {
+        let opacity = 0;
         square.addEventListener("mouseover", e => {
-            let red = getRandomInt(255);
+            let red   = getRandomInt(255);
             let green = getRandomInt(255);
-            let blue = getRandomInt(255);
-            e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue})`;
-            // opacity = (opacity + 10) % 255;
-            // e.target.style.backgroundColor = `rgba(${opacity},${opacity},${opacity},${opacity})`;
+            let blue  = getRandomInt(255);
             // e.target.classList.toggle("shaded");
+            // let red     = 0;
+            // let green   = 0;
+            // let blue    = 0;
+            e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity < 1 ? opacity += 0.1 : opacity = 0})`;
         });
     });
 }
