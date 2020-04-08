@@ -16,7 +16,8 @@ const setColor = e => {
     let green   = 0;
     let blue    = 0;
     let opacity = getOpacity(e);
-    e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity < 1 ? opacity += 0.1 : opacity})`;
+    isNaN(opacity) ? opacity = 0 : opacity;
+    e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity < 0.9 ? opacity += 0.1 : opacity})`;
 }
 
 const setRainbow = e => {
