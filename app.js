@@ -68,7 +68,10 @@ const reset = () => {
     while(container.firstChild) {
         container.removeChild(container.lastChild);
     }
-    size = parseInt(prompt("How many squares per side?"));
+    size = parseInt(prompt("How many squares per side? Pick a value between 1 and 100"));
+    while(size < 0 || size > 100 || isNaN(size)) {
+        size = parseInt(prompt("Invalid value! Please enter a value between 1 and 100"));
+    }
     rainbowMode.value = "off";
     generateGrid(size);
     addListeners(rainbowMode.value);
