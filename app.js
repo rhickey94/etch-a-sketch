@@ -27,7 +27,7 @@ const setRainbow = e => {
     e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
-const generateGrid = (size) => {
+const generateGrid = size => {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     for(let i = 0; i < size; i++) {
         for(let j = 0; j < size; j++) {
@@ -38,7 +38,7 @@ const generateGrid = (size) => {
     }
 }
 
-const addListeners = (rainbowMode) => {
+const addListeners = rainbowMode => {
     const squares = document.querySelectorAll(".square");
     if(rainbowMode === "off") {
         squares.forEach(square => {
@@ -51,7 +51,7 @@ const addListeners = (rainbowMode) => {
     }
 }
 
-const removeListeners = (rainbowMode) => {
+const removeListeners = rainbowMode => {
     const squares = document.querySelectorAll(".square");
     if(rainbowMode === "off") {
         squares.forEach(square => {
