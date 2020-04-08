@@ -1,5 +1,4 @@
 let size = 16;
-// let opacity = 0;
 const container = document.querySelector(".container");
 const resetButton = document.querySelector("#reset");
 const rainbowMode = document.querySelector("#rainbow-select");
@@ -17,7 +16,7 @@ const setColor = e => {
     let green   = 0;
     let blue    = 0;
     let opacity = getOpacity(e);
-    e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity < 1 ? opacity += 0.1 : opacity = 0.1})`;
+    e.target.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity < 1 ? opacity += 0.1 : opacity})`;
 }
 
 const setRainbow = e => {
