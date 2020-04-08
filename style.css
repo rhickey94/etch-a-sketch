@@ -22,7 +22,6 @@ h1 {
 }
 
 .square {
-    border: 1px dotted black;
     background-color: rgba(255,255,255,1.0);
 }
 
